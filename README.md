@@ -5,5 +5,6 @@ This repository provides tools to extract video frames of a product shot from va
 
 ## Prerequisites
 1. **Python 3.7+**
-2. **instant-ngp**: For NeRF-based 3D reconstruction
+2. **COLMAP**: For photogrammetry-based 3D reconstruction and camera pose estimation
+3. **instant-ngp**: For NeRF-based 3D reconstruction
 

@@ -1,3 +1,4 @@
 opencv-python         # For video frame extraction and processing
 numpy                 # For numerical operations
 tqdm                  # For progress bars 
+Pillow                # For image resizing
