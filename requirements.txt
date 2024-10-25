@@ -1,4 +1,2 @@
-opencv-python         # For video frame extraction and processing
-numpy                 # For numerical operations
-tqdm                  # For progress bars 
-Pillow                # For image resizing
+opencv-python         # For video frame extraction
+torch                 # PyTorch for torch-ngp

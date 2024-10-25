@@ -6,12 +6,12 @@ pip install -r requirements.txt
 echo "Installing COLMAP..."
 sudo apt update && sudo apt install colmap
 
-# Clone and build instant-ngp (NeRF)
-echo "Cloning NeRF..."
-git clone https://github.com/NVlabs/instant-ngp.git
-cd instant-ngp
-cmake . -B build -DNGP_BUILD_WITH_GUI=off
-make -C build -j
+# Clone and set up torch-ngp for CUDA-based NeRF
+echo "Cloning torch-ngp..."
+git clone https://github.com/ashawkey/torch-ngp.git
+cd torch-ngp
+pip install -r requirements.txt
+pip install git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
 cd ..
 
 echo "Setup complete!"

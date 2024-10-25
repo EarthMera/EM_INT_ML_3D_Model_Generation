@@ -3,3 +3,7 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+
+# Video files and data
+data/raw_videos/*
+data/frames/*
