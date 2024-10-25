@@ -4,6 +4,7 @@
 This repository provides a fully automated pipeline to generate a 3D model from a video using a **CUDA-optimized NeRF implementation** with **torch-ngp**. The only input required is a video file, and the rest is handled automatically.
 
 **torch-ngp**: https://github.com/ashawkey/torch-ngp.git
+
 **Tiny CUDA Neural Networks**: https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
 
 ## Prerequisites
