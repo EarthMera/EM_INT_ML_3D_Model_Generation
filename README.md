@@ -5,7 +5,7 @@ This repository provides a fully automated pipeline to generate a 3D model from 
 
 **torch-ngp**: https://github.com/ashawkey/torch-ngp.git
 
-**Tiny CUDA Neural Networks**: https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
+**Tiny CUDA Neural Networks**: https://github.com/NVlabs/tiny-cuda-nn.git
 
 ## Prerequisites
 1. **Python 3.7+** for frame extraction
