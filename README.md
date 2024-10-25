@@ -21,11 +21,7 @@ cd EM_INT_ML_3D_Model_Generation
 ```
 
 ### 2. Install Dependencies
-Run the provided setup script to install Python packages and external tools like COLMAP and NeRF.
-```bash
-chmod +x setup.sh
-./setup.sh
-```
+Run the provided setup script, ```setup.sh```, to install Python packages and external tools like COLMAP and NeRF.
 
 ### 3. Input Video
 Place your product video in the ```data/raw_videos/``` directory.
