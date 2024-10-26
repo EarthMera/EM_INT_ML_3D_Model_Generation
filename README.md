@@ -4,7 +4,7 @@
 This repository provides a fully automated pipeline to generate a 3D model from a video using a **CUDA-optimized NeRF implementation** with **torch-ngp**. The pipeline leverages **tiny-cuda-nn** for fast training and **PyTorch** with **CUDA** for high performance.
 
 ## Prerequisites
-1. **Python 3.7+** (we used Python 3.10.15 for testing)
+1. **Python 3.8+** (we used Python 3.10.15 for testing)
 2. **tiny-cuda-nn**: Integrated with torch-ngp for fast and efficient neural networks. (cloned into this repository)
 3. **torch-ngp**: CUDA-optimized NeRF implementation. (cloned into this repository)
 4. **CUDA 12.1+**: Ensure your NVIDIA drivers support this version or higher.
