@@ -1,2 +1,2 @@
-opencv-python         # For video frame extraction
-torch                 # PyTorch for torch-ngp
+# Standard dependencies
+opencv-python

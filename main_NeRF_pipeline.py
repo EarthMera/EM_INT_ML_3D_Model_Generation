@@ -22,21 +22,24 @@ def run_full_nerf_pipeline(video_path, output_folder, frame_rate=10):
 
     # Step 2: Use COLMAP to estimate camera poses and create transforms.json
     print("Running COLMAP for camera pose estimation...")
+
+    colmap_path = "COLMAP.bat"  
     database_path = os.path.join(output_folder, 'colmap.db')
     sparse_model_path = os.path.join(output_folder, 'sparse')
     transforms_json_path = os.path.join(output_folder, 'transforms.json')
 
     # Run COLMAP commands
-    subprocess.run(['colmap', 'feature_extractor', '--database_path', database_path, '--image_path', frames_folder], check=True)
-    subprocess.run(['colmap', 'exhaustive_matcher', '--database_path', database_path], check=True)
-    subprocess.run(['colmap', 'mapper', '--database_path', database_path, '--image_path', frames_folder, '--output_path', sparse_model_path], check=True)
-    subprocess.run(['colmap', 'model_converter', '--input_path', os.path.join(sparse_model_path, '0'), '--output_path', transforms_json_path, '--output_type', 'TXT'], check=True)
+    subprocess.run([colmap_path, 'feature_extractor', '--database_path', database_path, '--image_path', frames_folder], check=True)
+    subprocess.run([colmap_path, 'exhaustive_matcher', '--database_path', database_path], check=True)
+    subprocess.run([colmap_path, 'mapper', '--database_path', database_path, '--image_path', frames_folder, '--output_path', sparse_model_path], check=True)
+    subprocess.run([colmap_path, 'model_converter', '--input_path', os.path.join(sparse_model_path, '0'), '--output_path', transforms_json_path, '--output_type', 'TXT'], check=True)
 
     print(f"Camera poses saved to {transforms_json_path}")
 
-    # Step 3: Run instant-ngp training
-    print("Starting NeRF training with instant-ngp...")
-    subprocess.run(['./instant-ngp/build/neural_rendering', '--mode', 'nerf', '--scene', frames_folder], cwd='./instant-ngp')
+    # Step 3: Run torch-ngp training
+    print("Starting NeRF training with torch-ngp...")
+    torch_ngp_script = os.path.join('torch-ngp', 'train.py')
+    subprocess.run(['python', torch_ngp_script, '--mode', 'nerf', '--scene', frames_folder, '--transforms', transforms_json_path], check=True)
 
     print("Pipeline complete. NeRF training finished.")
 

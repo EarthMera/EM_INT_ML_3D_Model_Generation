@@ -8,7 +8,7 @@ This repository provides a fully automated pipeline to generate a 3D model from 
 **Tiny CUDA Neural Networks**: https://github.com/NVlabs/tiny-cuda-nn.git
 
 ## Prerequisites
-1. **Python 3.7+** for frame extraction
+1. **Python 3.8+** for frame extraction
 2. **COLMAP**: For generating `transforms.json` with camera poses
 3. **torch-ngp**: CUDA-optimized NeRF implementation (cloned into this repository)
 
