@@ -4,7 +4,12 @@ pip install -r requirements.txt
 
 # Install COLMAP
 echo "Installing COLMAP..."
-sudo apt update && sudo apt install colmap
+git clone https://github.com/microsoft/vcpkg
+cd vcpkg
+sh bootstrap-vcpkg.sh
+.\vcpkg install colmap[cuda,tests]:x64-windows
+.\vcpkg install colmap[cuda-redist]:x64-windows
+
 
 # Clone and set up torch-ngp for CUDA-based NeRF
 echo "Cloning torch-ngp..."
