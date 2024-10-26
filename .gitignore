@@ -7,3 +7,18 @@ __pycache__/
 # Video files and data
 data/raw_videos/*
 data/frames/*
+data/transforms.json
+
+# torch-ngp binaries and builds
+torch-ngp/build/
+torch-ngp/data/
+torch-ngp/out/
+
+# tiny-cuda-nn build artifacts
+tiny-cuda-nn/build/
+tiny-cuda-nn/out/
+tiny-cuda-nn/logs/
+
+# Miscellaneous
+*.log
+*.tmp
