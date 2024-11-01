@@ -5,7 +5,7 @@ __pycache__/
 *.pyd
 
 # Video files and data
-data/
+
 
 # Miscellaneous
 *.log
