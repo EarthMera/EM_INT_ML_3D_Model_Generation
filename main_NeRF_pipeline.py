@@ -16,17 +16,17 @@ def run_full_nerf_pipeline(product, frame_rate=5, gui=False, n_steps=20000):
     # Step 1: colmap2nerf.py
     print("Running colmap2nerf.py...")
 
-    os.chdir(os.getcwd() + '\data')
-    os.chdir(os.getcwd() + f'\{product}')
+    # os.chdir(os.getcwd() + '\data')
+    # os.chdir(os.getcwd() + f'\{product}')
     
-    colamp2nerf_path = "../../instant-ngp/scripts/colmap2nerf.py"
-    subprocess.run(['python', colamp2nerf_path, '--video_in', f'{product}.mp4', '--video_fps', str(frame_rate), '--run_colmap', '--aabb_scale', '32'])
+    # colamp2nerf_path = "../../instant-ngp/scripts/colmap2nerf.py"
+    # subprocess.run(['python', colamp2nerf_path, '--video_in', f'{product}.mp4', '--video_fps', str(frame_rate), '--run_colmap', '--aabb_scale', '32'])
 
-    # Step 2: instant-ngp
-    print("Running instant-ngp...")
+    # # Step 2: instant-ngp
+    # print("Running instant-ngp...")
     
-    os.chdir("../")
-    os.chdir("../")
+    # os.chdir("../")
+    # os.chdir("../")
     os.chdir(os.getcwd() + '\instant-ngp')
     
     if gui:
