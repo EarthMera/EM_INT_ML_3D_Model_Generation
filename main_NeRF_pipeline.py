@@ -30,9 +30,9 @@ def run_full_nerf_pipeline(product, frame_rate=5, gui=False, n_steps=20000):
     os.chdir(os.getcwd() + '\instant-ngp')
     
     if gui:
-        subprocess.run(['python', 'scripts/run.py', f'../data/{product}', '--save_mesh', f'../data/{product}/mesh.obj', '--gui', '--train', '--n_steps', str(n_steps)])
+        subprocess.run(['python', 'scripts/run.py', f'../data/{product}', '--save_mesh', f'../data/{product}/hydro_flask.obj', '--gui', '--train', '--n_steps', str(n_steps)])
     else:
-        subprocess.run(['python', 'scripts/run.py', f'../data/{product}', '--save_mesh', f'../data/{product}/mesh.obj', '--n_steps', str(n_steps)])
+        subprocess.run(['python', 'scripts/run.py', f'../data/{product}', '--save_mesh', f'../data/{product}/hydro_flask.obj', '--n_steps', str(n_steps)])
     
     print("Pipeline complete. NeRF training finished.")
 
