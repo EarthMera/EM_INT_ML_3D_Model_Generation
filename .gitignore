@@ -4,6 +4,9 @@ __pycache__/
 *.pyo
 *.pyd
 
+# Video files and data
+data/
+
 # Miscellaneous
 *.log
 *.tmp
