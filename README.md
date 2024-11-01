@@ -41,7 +41,7 @@ To run the entire pipeline, provide the name of the product:
 ./EM_INT_ML_3D_Model_Generation$ python main_nerf_pipeline.py --product {product}
 ```
 
-**Note**: If you run into a pyngp not found error, ensure that during Step 3, you installed usign the correct Python version. You can ensure this by activating your virtual environment in the Developer Command Prompt before running the CMake commands. When you redo Step 3, make sure to delete the instant-ngp/build folder before re-running. 
+**Note**: If you run into a pyngp not found error, ensure that during Step 3, you installed usign the correct Python version. You can ensure this by activating your virtual environment in the Developer Command Prompt before running the CMake commands. When you redo Step 3, make sure to delete the ```instant-ngp/build``` folder before re-running. 
 
 This will:
 
