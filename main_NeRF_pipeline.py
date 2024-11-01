@@ -43,7 +43,7 @@ if __name__ == "__main__":
     parser.add_argument('--product', type=str, required=True, help="Name of your product.")
     parser.add_argument('--frame_rate', type=int, default=5, help="Frame extraction rate (every nth frame).")
     parser.add_argument("--gui", action="store_true", help="Run the testbed GUI interactively.")
-    parser.add_argument('--n_steps', type=int, help="Number of steps for training.")
+    parser.add_argument('--n_steps', type=int, default=20000, help="Number of steps for training.")
     
     args = parser.parse_args()
 
