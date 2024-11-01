@@ -1,7 +1,7 @@
 # Product 3D Modeling from Video using CUDA-Based Neural Radiance Fields (NeRF)
 
 ## Overview
-This repository provides a fully automated pipeline to generate a 3D model from a video using a **CUDA-optimized NeRF implementation** with **torch-ngp**. The pipeline leverages **tiny-cuda-nn** for fast training and **PyTorch** with **CUDA** for high performance.
+This repository provides a fully automated pipeline to generate a 3D model from a video using a **CUDA-optimized NeRF implementation** with **instant-ngp**.
 
 ## Prerequisites
 1. **Python 3.8+** (we used Python 3.10.15 for testing)
@@ -33,7 +33,7 @@ Run the provided setup script, ```setup.bat```, to clone in necessary repositori
 ```
 
 ### 3. Input Video
-Create a new folder for your product under ```data/``` and place your product video in your folder, ```data/{product}/{product}.mp4```. Ensure your folder name and your video name are both your product's name.
+Create a directory, ```data/```. Create a folder for your product under ```data/``` and place your product video in your folder, ```data/{product}/{product}.mp4```. Ensure your folder name and your video name are both your product's name.
 
 ### 4. Run the Pipeline
 To run the entire pipeline, provide the name of the product:
@@ -46,7 +46,7 @@ This will:
 1. Extract frames from the input video.
 2. Use COLMAP to estimate camera poses and generate ```transforms.json```.
 3. Automatically start training the NeRF model using **instant-ngp**.
-4. After training, a marching-cubes based mesh from the NeRF model will be saved in OBJ format in ```data/{product}```
+4. After training, a marching-cubes based mesh from the NeRF model will be saved in OBJ format in ```data/{product}```.
 
 ## Output
 The NeRF model will be trained, and the mesh OBJ file will be saved in ```data/{product}```.
