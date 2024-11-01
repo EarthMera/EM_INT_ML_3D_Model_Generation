@@ -32,14 +32,16 @@ Run the provided setup script, ```setup.bat```, to clone in necessary repositori
 ./EM_INT_ML_3D_Model_Generation/instant-ngp$ cmake --build build --config RelWithDebInfo -j
 ```
 
-### 3. Input Video
+### 4 Input Video
 Create a directory, ```data/```. Create a folder for your product under ```data/``` and place your product video in your folder, ```data/{product}/{product}.mp4```. Ensure your folder name and your video name are both your product's name.
 
-### 4. Run the Pipeline
+### 5. Run the Pipeline
 To run the entire pipeline, provide the name of the product:
 ```bash
 ./EM_INT_ML_3D_Model_Generation$ python main_nerf_pipeline.py --product {product}
 ```
+
+**Note**: If you run into a pyngp not found error, ensure that during Step 3, you installed usign the correct Python version. You can ensure this by activating your virtual environment in the Developer Command Prompt before running the CMake commands. When you redo Step 3, make sure to delete the instant-ngp/build folder before re-running. 
 
 This will:
 
